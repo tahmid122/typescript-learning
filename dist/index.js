@@ -10,21 +10,15 @@
 // console.log(poped);
 // console.log(shifted);
 Object.defineProperty(exports, "__esModule", { value: true });
-const person = {
-    name: "Tahmid",
+const student1 = {
+    name: "tahmid",
     age: 21,
-    isStudent: true,
-    address: {
-        city: "Jashore",
-        country: "BD",
-    },
+    gender: "male",
+    greet: (country) => `my name is ${student1.name} and age is ${student1.age} and ${country}`,
 };
-const product1 = {
-    name: "Infinix hot 11 play",
-    quantity: 10,
-    price: 12000,
+const introduction = (student1) => {
+    const { name, age } = student1;
+    return `Welcome my name is ${name} and I'am ${age} years old`;
 };
-const calculatePrice = (obj) => {
-    return obj.quantity * obj.price;
-};
-console.log(calculatePrice(product1));
+console.log(introduction(student1));
+console.log(student1.greet("BD"));

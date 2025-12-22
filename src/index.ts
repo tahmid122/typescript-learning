@@ -116,3 +116,26 @@
 //   return obj.quantity * obj.price;
 // };
 // console.log(calculatePrice(product1));
+
+//* Call signature
+
+// type Student = {
+//   name: string;
+//   age: number;
+//   gender?: string;
+//   greet: (country: string) => string; //call signature
+// };
+// const student1: Student = {
+//   name: "tahmid",
+//   age: 21,
+//   gender: "male",
+//   greet: (country) =>
+//     `my name is ${student1.name} and age is ${student1.age} and ${country}`,
+// };
+
+// const introduction = (student1: Student) => {
+//   const { name, age } = student1;
+//   return `Welcome my name is ${name} and I'am ${age} years old`;
+// };
+// console.log(introduction(student1));
+// console.log(student1.greet("BD"));
