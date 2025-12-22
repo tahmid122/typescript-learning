@@ -157,3 +157,9 @@
 //   role: Roles.admin,
 // };
 // console.log(person1);
+
+// * Tuples
+type PersonInfo = readonly [string, number, boolean];
+
+let person1: PersonInfo = ["tahmid", 2, true];
+let person2: PersonInfo = ["", 1, false];
