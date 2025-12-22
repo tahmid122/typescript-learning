@@ -139,3 +139,21 @@
 // };
 // console.log(introduction(student1));
 // console.log(student1.greet("BD"));
+
+//* Enums
+// enum Roles {
+//   user = "user",
+//   admin = "admin",
+// }
+// type LoginDetails = {
+//   name?: string;
+//   email: string;
+//   password: string;
+//   role: Roles;
+// };
+// let person1: LoginDetails = {
+//   email: "tahmid@gmail.com",
+//   password: "1234",
+//   role: Roles.admin,
+// };
+// console.log(person1);

@@ -10,15 +10,127 @@
 // console.log(poped);
 // console.log(shifted);
 Object.defineProperty(exports, "__esModule", { value: true });
-const student1 = {
-    name: "tahmid",
-    age: 21,
-    gender: "male",
-    greet: (country) => `my name is ${student1.name} and age is ${student1.age} and ${country}`,
+// for (let i = 0; i <= fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
+// fruits.forEach((curVal: string): void => console.log(curVal));
+// * Array map and filter
+// const numbers: number[] = [1, 2, 3, 4, 5];
+// const double: number[] = numbers.map((num: number): number => {
+//   return num * 2;
+// });
+// console.log(double);
+// const filteredEven: number[] = numbers.filter(
+//   (number: number) => number % 20 === 0
+// );
+// console.log(filteredEven);
+// //! Homework 1
+// const names: string[] = ["tahmid", "medha"];
+// const uppercase: string[] = names.map((name: string) => name.toUpperCase());
+// console.log(uppercase);
+// //! Homework 2
+// const numbersArr: number[] = [1, 2, 3, 4, 5];
+// const squares: number[] = numbersArr.map((num: number) => num ** 2);
+// console.log(squares);
+// // !Homework 3
+// const namesFil: string[] = ["tahmid", "medha", "etul"];
+// const filteredNames: string[] = namesFil.filter(
+//   (name: string) => name.length > 4
+// );
+// console.log(filteredNames);
+// //! Homework 4
+// const filterNames: string[] = ["alice", "bob"];
+// const filterNamesStartA: string[] = filterNames.filter((name: string) =>
+//   name.startsWith("a")
+// );
+// console.log(filterNamesStartA);
+//* Object
+// const person: {
+//   name: string;
+//   age: number;
+//   isStudent: boolean;
+//   address: {
+//     city: string;
+//     country: string;
+//   };
+// } = {
+//   name: "Tahmid",
+//   age: 21,
+//   isStudent: true,
+//   address: {
+//     city: "Jashore",
+//     country: "Bangladesh",
+//   },
+// };
+// console.log(person.name);
+// //! Home work 1
+// const product: { name: string; quantity: number; price: number } = {
+//   name: "Iphone",
+//   quantity: 1,
+//   price: 111000,
+// };
+// * Type aliases
+// type Person = {
+//   name: string;
+//   age: number;
+//   isStudent: boolean;
+//   address: {
+//     city: string;
+//     country: string;
+//   };
+// };
+// const person: Person = {
+//   name: "Tahmid",
+//   age: 21,
+//   isStudent: true,
+//   address: {
+//     city: "Jashore",
+//     country: "BD",
+//   },
+// };
+// type Product = {
+//   name: string;
+//   quantity: number;
+//   price: number;
+// };
+// const product1: Product = {
+//   name: "Infinix hot 11 play",
+//   quantity: 10,
+//   price: 12000,
+// };
+// const calculatePrice = (obj: Product): number => {
+//   return obj.quantity * obj.price;
+// };
+// console.log(calculatePrice(product1));
+//* Call signature
+// type Student = {
+//   name: string;
+//   age: number;
+//   gender?: string;
+//   greet: (country: string) => string; //call signature
+// };
+// const student1: Student = {
+//   name: "tahmid",
+//   age: 21,
+//   gender: "male",
+//   greet: (country) =>
+//     `my name is ${student1.name} and age is ${student1.age} and ${country}`,
+// };
+// const introduction = (student1: Student) => {
+//   const { name, age } = student1;
+//   return `Welcome my name is ${name} and I'am ${age} years old`;
+// };
+// console.log(introduction(student1));
+// console.log(student1.greet("BD"));
+//* Enums
+var Roles;
+(function (Roles) {
+    Roles["user"] = "user";
+    Roles["admin"] = "admin";
+})(Roles || (Roles = {}));
+let person1 = {
+    email: "tahmid@gmail.com",
+    password: "1234",
+    role: Roles.admin,
 };
-const introduction = (student1) => {
-    const { name, age } = student1;
-    return `Welcome my name is ${name} and I'am ${age} years old`;
-};
-console.log(introduction(student1));
-console.log(student1.greet("BD"));
+console.log(person1);
