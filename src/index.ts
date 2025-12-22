@@ -53,28 +53,66 @@
 
 //* Object
 
-const person: {
-  name: string;
-  age: number;
-  isStudent: boolean;
-  address: {
-    city: string;
-    country: string;
-  };
-} = {
-  name: "Tahmid",
-  age: 21,
-  isStudent: true,
-  address: {
-    city: "Jashore",
-    country: "Bangladesh",
-  },
-};
-console.log(person.name);
+// const person: {
+//   name: string;
+//   age: number;
+//   isStudent: boolean;
+//   address: {
+//     city: string;
+//     country: string;
+//   };
+// } = {
+//   name: "Tahmid",
+//   age: 21,
+//   isStudent: true,
+//   address: {
+//     city: "Jashore",
+//     country: "Bangladesh",
+//   },
+// };
+// console.log(person.name);
 
-//! Home work 1
-const product: { name: string; quantity: number; price: number } = {
-  name: "Iphone",
-  quantity: 1,
-  price: 111000,
-};
+// //! Home work 1
+// const product: { name: string; quantity: number; price: number } = {
+//   name: "Iphone",
+//   quantity: 1,
+//   price: 111000,
+// };
+
+// * Type aliases
+// type Person = {
+//   name: string;
+//   age: number;
+//   isStudent: boolean;
+//   address: {
+//     city: string;
+//     country: string;
+//   };
+// };
+
+// const person: Person = {
+//   name: "Tahmid",
+//   age: 21,
+//   isStudent: true,
+//   address: {
+//     city: "Jashore",
+//     country: "BD",
+//   },
+// };
+
+// type Product = {
+//   name: string;
+//   quantity: number;
+//   price: number;
+// };
+
+// const product1: Product = {
+//   name: "Infinix hot 11 play",
+//   quantity: 10,
+//   price: 12000,
+// };
+
+// const calculatePrice = (obj: Product): number => {
+//   return obj.quantity * obj.price;
+// };
+// console.log(calculatePrice(product1));
