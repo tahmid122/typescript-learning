@@ -123,14 +123,47 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // console.log(introduction(student1));
 // console.log(student1.greet("BD"));
 //* Enums
-var Roles;
-(function (Roles) {
-    Roles["user"] = "user";
-    Roles["admin"] = "admin";
-})(Roles || (Roles = {}));
-let person1 = {
-    email: "tahmid@gmail.com",
-    password: "1234",
-    role: Roles.admin,
+// enum Roles {
+//   user = "user",
+//   admin = "admin",
+// }
+// type LoginDetails = {
+//   name?: string;
+//   email: string;
+//   password: string;
+//   role: Roles;
+// };
+// let person1: LoginDetails = {
+//   email: "tahmid@gmail.com",
+//   password: "1234",
+//   role: Roles.admin,
+// };
+// console.log(person1);
+// * Tuples
+// type PersonInfo = readonly [string, number, boolean];
+// let person1: PersonInfo = ["tahmid", 2, true];
+// let person2: PersonInfo = ["", 1, false];
+//* Unions and Intersection
+const inputVAlue = (value) => {
+    return value;
 };
-console.log(person1);
+inputVAlue(55);
+inputVAlue("Hello world");
+inputVAlue(true);
+//! Home work 1
+const checking = (value) => {
+    var _a;
+    if (typeof value === "number") {
+        return `$${value.toExponential(2)}`;
+    }
+    else if (typeof value === "boolean") {
+        value ? "Yes" : "False";
+    }
+    else if (typeof value === "string") {
+        return ((_a = value[0]) === null || _a === void 0 ? void 0 : _a.toUpperCase()) + value.slice(1);
+    }
+    return 0;
+};
+console.log(checking(5));
+console.log(checking(true));
+console.log(checking("medha"));

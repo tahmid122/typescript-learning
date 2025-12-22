@@ -159,7 +159,50 @@
 // console.log(person1);
 
 // * Tuples
-type PersonInfo = readonly [string, number, boolean];
+// type PersonInfo = readonly [string, number, boolean];
 
-let person1: PersonInfo = ["tahmid", 2, true];
-let person2: PersonInfo = ["", 1, false];
+// let person1: PersonInfo = ["tahmid", 2, true];
+// let person2: PersonInfo = ["", 1, false];
+
+//* Unions and Intersection
+const inputVAlue = (
+  value: string | number | boolean
+): string | number | boolean => {
+  return value;
+};
+inputVAlue(55);
+inputVAlue("Hello world");
+inputVAlue(true);
+
+//! Home work 1
+const checking = (
+  value: number | string | boolean
+): number | string | boolean => {
+  if (typeof value === "number") {
+    return `$${value.toExponential(2)}`;
+  } else if (typeof value === "boolean") {
+    value ? "Yes" : "False";
+  } else if (typeof value === "string") {
+    return value[0]?.toUpperCase() + value.slice(1);
+  }
+  return 0;
+};
+console.log(checking(5));
+console.log(checking(true));
+console.log(checking("medha"));
+
+type Person = {
+  name: string;
+  age: number;
+};
+type Employee = {
+  id: number;
+  department: string;
+};
+type EmployeeDetails = Person & Employee;
+let person1: EmployeeDetails = {
+  name: "tahmid",
+  age: 21,
+  id: 1,
+  department: "",
+};
