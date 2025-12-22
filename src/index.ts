@@ -50,3 +50,31 @@
 //   name.startsWith("a")
 // );
 // console.log(filterNamesStartA);
+
+//* Object
+
+const person: {
+  name: string;
+  age: number;
+  isStudent: boolean;
+  address: {
+    city: string;
+    country: string;
+  };
+} = {
+  name: "Tahmid",
+  age: 21,
+  isStudent: true,
+  address: {
+    city: "Jashore",
+    country: "Bangladesh",
+  },
+};
+console.log(person.name);
+
+//! Home work 1
+const product: { name: string; quantity: number; price: number } = {
+  name: "Iphone",
+  quantity: 1,
+  price: 111000,
+};

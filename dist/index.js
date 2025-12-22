@@ -15,26 +15,44 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // }
 // fruits.forEach((curVal: string): void => console.log(curVal));
 // * Array map and filter
-const numbers = [1, 2, 3, 4, 5];
-const double = numbers.map((num) => {
-    return num * 2;
-});
-console.log(double);
-const filteredEven = numbers.filter((number) => number % 20 === 0);
-console.log(filteredEven);
-//! Homework 1
-const names = ["tahmid", "medha"];
-const uppercase = names.map((name) => name.toUpperCase());
-console.log(uppercase);
-//! Homework 2
-const numbersArr = [1, 2, 3, 4, 5];
-const squares = numbersArr.map((num) => Math.pow(num, 2));
-console.log(squares);
-// !Homework 3
-const namesFil = ["tahmid", "medha", "etul"];
-const filteredNames = namesFil.filter((name) => name.length > 4);
-console.log(filteredNames);
-//! Homework 4
-const filterNames = ["alice", "bob"];
-const filterNamesStartA = filterNames.filter((name) => name.startsWith("a"));
-console.log(filterNamesStartA);
+// const numbers: number[] = [1, 2, 3, 4, 5];
+// const double: number[] = numbers.map((num: number): number => {
+//   return num * 2;
+// });
+// console.log(double);
+// const filteredEven: number[] = numbers.filter(
+//   (number: number) => number % 20 === 0
+// );
+// console.log(filteredEven);
+// //! Homework 1
+// const names: string[] = ["tahmid", "medha"];
+// const uppercase: string[] = names.map((name: string) => name.toUpperCase());
+// console.log(uppercase);
+// //! Homework 2
+// const numbersArr: number[] = [1, 2, 3, 4, 5];
+// const squares: number[] = numbersArr.map((num: number) => num ** 2);
+// console.log(squares);
+// // !Homework 3
+// const namesFil: string[] = ["tahmid", "medha", "etul"];
+// const filteredNames: string[] = namesFil.filter(
+//   (name: string) => name.length > 4
+// );
+// console.log(filteredNames);
+// //! Homework 4
+// const filterNames: string[] = ["alice", "bob"];
+// const filterNamesStartA: string[] = filterNames.filter((name: string) =>
+//   name.startsWith("a")
+// );
+// console.log(filterNamesStartA);
+//* Object
+const person = {
+    name: "Tahmid",
+    age: 21,
+    isStudent: true,
+    address: {
+        city: "Jashore",
+        country: "Bangladesh",
+    },
+};
+person.name = "Medha";
+console.log(person.name);
