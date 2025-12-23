@@ -287,6 +287,31 @@
 
 // * Class
 
+// class Person {
+//   name: string;
+//   age: number;
+//   hobbies: string[];
+//   constructor(name: string, age: number, hobbies: string[]) {
+//     this.name = name;
+//     this.age = age;
+//     this.hobbies = hobbies;
+//   }
+//   greet(): void {
+//     console.log(
+//       `Hi I am ${this.name} and I am ${
+//         this.age
+//       } years old. I likes ${this.hobbies.toString()}`
+//     );
+//   }
+// }
+// const person1: Person = new Person("Tahmid", 21, ["tahmid", "medha"]);
+// const person2: Person = new Person("Medha", 21, ["reading", "drawing"]);
+// console.log(person1);
+// console.log(person2);
+// person1.greet();
+
+// * Inheritance
+
 class Person {
   name: string;
   age: number;
@@ -296,16 +321,24 @@ class Person {
     this.age = age;
     this.hobbies = hobbies;
   }
-  greet(): void {
-    console.log(
-      `Hi I am ${this.name} and I am ${
-        this.age
-      } years old. I likes ${this.hobbies.toString()}`
-    );
+  greet(): string {
+    return `Hi I am ${this.name} and I am ${
+      this.age
+    } years old. I likes ${this.hobbies.join(",")}`;
   }
 }
+class Student extends Person {
+  grade: number;
+  constructor(name: string, age: number, hobbies: string[], grade: number) {
+    super(name, age, hobbies);
+    this.grade = grade;
+  }
+  greets(): void {
+    console.log(`${super.greet()} Grade is ${this.grade}`);
+  }
+}
+class Teacher {}
 const person1: Person = new Person("Tahmid", 21, ["tahmid", "medha"]);
-const person2: Person = new Person("Medha", 21, ["reading", "drawing"]);
-console.log(person1);
-console.log(person2);
-person1.greet();
+const person2: Student = new Student("Medha", 21, ["reading", "drawing"], 5.4);
+// console.log(person2);
+person2.greets();
