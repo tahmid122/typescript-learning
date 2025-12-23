@@ -326,19 +326,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // person1.age = 10;
 // console.log(person1.getAge);
 //* Static method and properties
-class Person {
-    name;
-    constructor(name) {
-        this.name = name;
-    }
-}
-const user1 = new Person("tahmid");
-console.log(user1);
-class MathOperations {
-    static PI = Math.PI;
-    static add(num1, num2) {
-        return num1 + num2;
-    }
-}
-console.log(MathOperations.PI);
-console.log(MathOperations.add(1, 2));
+// class Person {
+//   constructor(public name: string) {}
+// }
+// const user1 = new Person("tahmid");
+// console.log(user1);
+// class MathOperations {
+//   public static PI: number = Math.PI;
+//   public static add(num1: number, num2: number): number {
+//     return num1 + num2;
+//   }
+// }
+// console.log(MathOperations.PI);
+// console.log(MathOperations.add(1, 2));
+// *  Type Safety - typeof guard

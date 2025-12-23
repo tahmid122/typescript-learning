@@ -368,17 +368,19 @@
 
 //* Static method and properties
 
-class Person {
-  constructor(public name: string) {}
-}
-const user1 = new Person("tahmid");
-console.log(user1);
+// class Person {
+//   constructor(public name: string) {}
+// }
+// const user1 = new Person("tahmid");
+// console.log(user1);
 
-class MathOperations {
-  public static PI: number = Math.PI;
-  public static add(num1: number, num2: number): number {
-    return num1 + num2;
-  }
-}
-console.log(MathOperations.PI);
-console.log(MathOperations.add(1, 2));
+// class MathOperations {
+//   public static PI: number = Math.PI;
+//   public static add(num1: number, num2: number): number {
+//     return num1 + num2;
+//   }
+// }
+// console.log(MathOperations.PI);
+// console.log(MathOperations.add(1, 2));
+
+// *  Type Safety - typeof guard
