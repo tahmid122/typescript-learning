@@ -312,33 +312,56 @@
 
 // * Inheritance
 
+// class Person {
+//   name: string;
+//   private age: number;
+//   hobbies: string[];
+//   constructor(name: string, age: number, hobbies: string[]) {
+//     this.name = name;
+//     this.age = age;
+//     this.hobbies = hobbies;
+//   }
+//   greet(): string {
+//     return `Hi I am ${this.name} and I am ${
+//       this.age
+//     } years old. I likes ${this.hobbies.join(",")}`;
+//   }
+// }
+// class Student extends Person {
+//   grade: number;
+//   constructor(name: string, age: number, hobbies: string[], grade: number) {
+//     super(name, age, hobbies);
+//     this.grade = grade;
+//   }
+//   greets(): void {
+//     console.log(`${super.greet()} Grade is ${this.grade}`);
+//   }
+// }
+// class Teacher {}
+// const person1: Person = new Person("Tahmid", 21, ["tahmid", "medha"]);
+// const person2: Student = new Student("Medha", 21, ["reading", "drawing"], 5.4);
+// console.log(person1.age);
+// person2.greets();
+
+//* Getter and Setter
 class Person {
   name: string;
-  private age: number;
-  hobbies: string[];
-  constructor(name: string, age: number, hobbies: string[]) {
+  private _age: number | undefined;
+  constructor(name: string) {
     this.name = name;
-    this.age = age;
-    this.hobbies = hobbies;
   }
-  greet(): string {
-    return `Hi I am ${this.name} and I am ${
-      this.age
-    } years old. I likes ${this.hobbies.join(",")}`;
+
+  public set age(age: number) {
+    if (age < 10) {
+      throw new Error("Invalid age");
+    } else {
+      this._age = age;
+    }
   }
-}
-class Student extends Person {
-  grade: number;
-  constructor(name: string, age: number, hobbies: string[], grade: number) {
-    super(name, age, hobbies);
-    this.grade = grade;
-  }
-  greets(): void {
-    console.log(`${super.greet()} Grade is ${this.grade}`);
+  public get getAge() {
+    return this._age;
   }
 }
-class Teacher {}
-const person1: Person = new Person("Tahmid", 21, ["tahmid", "medha"]);
-const person2: Student = new Student("Medha", 21, ["reading", "drawing"], 5.4);
-console.log(person1.age);
-person2.greets();
+const person1: Person = new Person("tahmid");
+person1.age = 10;
+console.log(person1.getAge);
