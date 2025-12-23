@@ -165,44 +165,91 @@
 // let person2: PersonInfo = ["", 1, false];
 
 //* Unions and Intersection
-const inputVAlue = (
-  value: string | number | boolean
-): string | number | boolean => {
+// const inputVAlue = (
+//   value: string | number | boolean
+// ): string | number | boolean => {
+//   return value;
+// };
+// inputVAlue(55);
+// inputVAlue("Hello world");
+// inputVAlue(true);
+
+// //! Home work 1
+// const checking = (
+//   value: number | string | boolean
+// ): number | string | boolean => {
+//   if (typeof value === "number") {
+//     return `$${value.toExponential(2)}`;
+//   } else if (typeof value === "boolean") {
+//     value ? "Yes" : "False";
+//   } else if (typeof value === "string") {
+//     return value[0]?.toUpperCase() + value.slice(1);
+//   }
+//   return 0;
+// };
+// console.log(checking(5));
+// console.log(checking(true));
+// console.log(checking("medha"));
+
+// type Person = {
+//   name: string;
+//   age: number;
+// };
+// type Employee = {
+//   id: number;
+//   department: string;
+// };
+// type EmployeeDetails = Person & Employee;
+// let person1: EmployeeDetails = {
+//   name: "tahmid",
+//   age: 21,
+//   id: 1,
+//   department: "",
+// };
+
+// type User = {
+//   id: number;
+//   name: string;
+//   email: string;
+// };
+// type Account = {
+//   accountId: number;
+//   accountType: string;
+//   balance: number;
+// };
+// type Combine = User & Account;
+// const user1: User = {
+//   id: 1,
+//   name: "tahmid",
+//   email: "mdtahmidalam122@gmail.com",
+// };
+// const account1: Account = {
+//   accountId: 1111,
+//   accountType: "savings",
+//   balance: 23000,
+// };
+
+// const combineUserAndAccount = (user: User, account: Account): Combine => {
+//   return { ...user, ...account };
+// };
+// const both: Combine = combineUserAndAccount(user1, account1);
+// console.log(both);
+
+//* Generics
+
+function logAndReturn<T>(value: T): T {
+  return value;
+}
+
+const numberResult = logAndReturn<number>(1);
+const stringResult = logAndReturn<string>("hello");
+console.log(numberResult);
+console.log(stringResult);
+
+// ! Homework 1
+
+const add = <T>(value: T, value2: T): T => {
   return value;
 };
-inputVAlue(55);
-inputVAlue("Hello world");
-inputVAlue(true);
-
-//! Home work 1
-const checking = (
-  value: number | string | boolean
-): number | string | boolean => {
-  if (typeof value === "number") {
-    return `$${value.toExponential(2)}`;
-  } else if (typeof value === "boolean") {
-    value ? "Yes" : "False";
-  } else if (typeof value === "string") {
-    return value[0]?.toUpperCase() + value.slice(1);
-  }
-  return 0;
-};
-console.log(checking(5));
-console.log(checking(true));
-console.log(checking("medha"));
-
-type Person = {
-  name: string;
-  age: number;
-};
-type Employee = {
-  id: number;
-  department: string;
-};
-type EmployeeDetails = Person & Employee;
-let person1: EmployeeDetails = {
-  name: "tahmid",
-  age: 21,
-  id: 1,
-  department: "",
-};
+console.log(add(1, 2));
+console.log(add("tahmid ", "alam"));
