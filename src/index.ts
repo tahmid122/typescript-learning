@@ -262,25 +262,50 @@
 
 // * Interface
 
-interface Person {
+// interface Person {
+//   name: string;
+//   age: number;
+//   greet: (value: string) => void;
+// }
+// const person: Person = {
+//   name: "tahmid",
+//   age: 21,
+//   greet: (country) => 1,
+// };
+
+// interface Product {
+//   name: string;
+//   price: number;
+//   quantity: number;
+// }
+// const product1: Product = { name: "1", price: 12000, quantity: 10 };
+
+// const calculateTotalPrice = (product: Product): number => {
+//   return product.price * product.quantity;
+// };
+// console.log(calculateTotalPrice(product1));
+
+// * Class
+
+class Person {
   name: string;
   age: number;
-  greet: (value: string) => void;
+  hobbies: string[];
+  constructor(name: string, age: number, hobbies: string[]) {
+    this.name = name;
+    this.age = age;
+    this.hobbies = hobbies;
+  }
+  greet(): void {
+    console.log(
+      `Hi I am ${this.name} and I am ${
+        this.age
+      } years old. I likes ${this.hobbies.toString()}`
+    );
+  }
 }
-const person: Person = {
-  name: "tahmid",
-  age: 21,
-  greet: (country) => 1,
-};
-
-interface Product {
-  name: string;
-  price: number;
-  quantity: number;
-}
-const product1: Product = { name: "1", price: 12000, quantity: 10 };
-
-const calculateTotalPrice = (product: Product): number => {
-  return product.price * product.quantity;
-};
-console.log(calculateTotalPrice(product1));
+const person1: Person = new Person("Tahmid", 21, ["tahmid", "medha"]);
+const person2: Person = new Person("Medha", 21, ["reading", "drawing"]);
+console.log(person1);
+console.log(person2);
+person1.greet();
