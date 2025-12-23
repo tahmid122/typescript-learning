@@ -253,9 +253,34 @@
 // };
 // console.log(add(1, 2));
 // console.log(add("tahmid ", "alam"));
-function add<T, U>(a: T, b: U, c: boolean) {
-  console.log(typeof a);
-  console.log(typeof b);
+// function add<T, U>(a: T, b: U, c: boolean) {
+//   console.log(typeof a);
+//   console.log(typeof b);
+// }
+// const result = add<number, string>(1, "tahmid", false);
+// const result2 = add<number, number>(5, 5, true);
+
+// * Interface
+
+interface Person {
+  name: string;
+  age: number;
+  greet: (value: string) => void;
 }
-const result = add<number, string>(1, "tahmid", false);
-const result2 = add<number, number>(5, 5, true);
+const person: Person = {
+  name: "tahmid",
+  age: 21,
+  greet: (country) => 1,
+};
+
+interface Product {
+  name: string;
+  price: number;
+  quantity: number;
+}
+const product1: Product = { name: "1", price: 12000, quantity: 10 };
+
+const calculateTotalPrice = (product: Product): number => {
+  return product.price * product.quantity;
+};
+console.log(calculateTotalPrice(product1));
