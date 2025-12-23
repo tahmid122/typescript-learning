@@ -210,16 +210,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // const both: Combine = combineUserAndAccount(user1, account1);
 // console.log(both);
 //* Generics
-function logAndReturn(value) {
-    return value;
+// function logAndReturn<T>(value: T): T {
+//   return value;
+// }
+// const numberResult = logAndReturn<number>(1);
+// const stringResult = logAndReturn<string>("hello");
+// console.log(numberResult);
+// console.log(stringResult);
+// // ! Homework 1
+// const add = <T>(value: T, value2: T): T => {
+//   return value;
+// };
+// console.log(add(1, 2));
+// console.log(add("tahmid ", "alam"));
+function add(a, b) {
+    console.log(typeof a);
+    console.log(typeof b);
 }
-const numberResult = logAndReturn(1);
-const stringResult = logAndReturn("hello");
-console.log(numberResult);
-console.log(stringResult);
-// ! Homework 1
-const add = (value, value2) => {
-    return value;
-};
-console.log(add(1, 2));
-console.log(add("tahmid ", "alam"));
+const result = add(1, "tahmid");
+const result2 = add("tahmid ", 5);

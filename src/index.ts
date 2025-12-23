@@ -237,19 +237,25 @@
 
 //* Generics
 
-function logAndReturn<T>(value: T): T {
-  return value;
+// function logAndReturn<T>(value: T): T {
+//   return value;
+// }
+
+// const numberResult = logAndReturn<number>(1);
+// const stringResult = logAndReturn<string>("hello");
+// console.log(numberResult);
+// console.log(stringResult);
+
+// // ! Homework 1
+
+// const add = <T>(value: T, value2: T): T => {
+//   return value;
+// };
+// console.log(add(1, 2));
+// console.log(add("tahmid ", "alam"));
+function add<T, U>(a: T, b: U, c: boolean) {
+  console.log(typeof a);
+  console.log(typeof b);
 }
-
-const numberResult = logAndReturn<number>(1);
-const stringResult = logAndReturn<string>("hello");
-console.log(numberResult);
-console.log(stringResult);
-
-// ! Homework 1
-
-const add = <T>(value: T, value2: T): T => {
-  return value;
-};
-console.log(add(1, 2));
-console.log(add("tahmid ", "alam"));
+const result = add<number, string>(1, "tahmid", false);
+const result2 = add<number, number>(5, 5, true);
