@@ -344,24 +344,41 @@
 // person2.greets();
 
 //* Getter and Setter
-class Person {
-  name: string;
-  private _age: number | undefined;
-  constructor(name: string) {
-    this.name = name;
-  }
+// class Person {
+//   name: string;
+//   private _age: number | undefined;
+//   constructor(name: string) {
+//     this.name = name;
+//   }
 
-  public set age(age: number) {
-    if (age < 10) {
-      throw new Error("Invalid age");
-    } else {
-      this._age = age;
-    }
-  }
-  public get getAge() {
-    return this._age;
+//   public set age(age: number) {
+//     if (age < 10) {
+//       throw new Error("Invalid age");
+//     } else {
+//       this._age = age;
+//     }
+//   }
+//   public get getAge() {
+//     return this._age;
+//   }
+// }
+// const person1: Person = new Person("tahmid");
+// person1.age = 10;
+// console.log(person1.getAge);
+
+//* Static method and properties
+
+class Person {
+  constructor(public name: string) {}
+}
+const user1 = new Person("tahmid");
+console.log(user1);
+
+class MathOperations {
+  public static PI: number = Math.PI;
+  public static add(num1: number, num2: number): number {
+    return num1 + num2;
   }
 }
-const person1: Person = new Person("tahmid");
-person1.age = 10;
-console.log(person1.getAge);
+console.log(MathOperations.PI);
+console.log(MathOperations.add(1, 2));
