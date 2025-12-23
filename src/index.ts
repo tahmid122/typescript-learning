@@ -314,7 +314,7 @@
 
 class Person {
   name: string;
-  age: number;
+  private age: number;
   hobbies: string[];
   constructor(name: string, age: number, hobbies: string[]) {
     this.name = name;
@@ -340,5 +340,5 @@ class Student extends Person {
 class Teacher {}
 const person1: Person = new Person("Tahmid", 21, ["tahmid", "medha"]);
 const person2: Student = new Student("Medha", 21, ["reading", "drawing"], 5.4);
-// console.log(person2);
+console.log(person1.age);
 person2.greets();
