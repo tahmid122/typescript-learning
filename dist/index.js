@@ -1,4 +1,3 @@
-"use strict";
 // * Array and its methods and iterations
 // const fruits: string[] = ["apple", "banana", "orange", "mango"];
 // let pushed = fruits.push("watermelon");
@@ -9,7 +8,7 @@
 // console.log(pushed);
 // console.log(poped);
 // console.log(shifted);
-Object.defineProperty(exports, "__esModule", { value: true });
+export {};
 // for (let i = 0; i <= fruits.length; i++) {
 //   console.log(fruits[i]);
 // }
